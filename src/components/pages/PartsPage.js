@@ -13,21 +13,21 @@ function PartsPage() {
   let query = useQuery();
   return (
     <>
-      <dl className={styles.partsDetails}>
-        <dt>
-          <strong>Name:</strong>
-        </dt>
-        <dd>{query.get('name')}</dd>
-        <dt>
-          <strong>Type:</strong>
-        </dt>
-        <dd>{query.get('type')}</dd>
-        <dt>
-          <strong>Price:</strong>
-        </dt>
-
-        <dd>{query.get('price')}</dd>
-      </dl>
+      <div className={styles.partsDetails}>
+        <h3>PART DETAILS</h3>
+        <p>
+          <strong>NAME: </strong>
+          <span>{query.get('name')}</span>
+        </p>
+        <p>
+          <strong>TYPE: </strong>
+          <span>{query.get('type')}</span>
+        </p>
+        <p>
+          <strong>PRICE: </strong>
+          <span>{query.get('price')}</span>
+        </p>
+      </div>
     </>
   );
 }
