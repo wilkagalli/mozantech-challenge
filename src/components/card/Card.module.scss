@@ -9,6 +9,10 @@
   background-color: white;
   box-shadow: 0 2px 8px 0 rgba(51, 51, 51, 0.16);
 
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
   &:hover {
     transform: translateX(15px);
   }
