@@ -1,4 +1,4 @@
-# MOZANTECH FRONTEND CHALLENG
+# MOZANTECH FRONTEND CHALLENGE
 
 Hello, this is the resolution of the challenge proposed by the Mozantech project. It is a SPA developed in react to show information about computer parts, as well as filter, order and show the details. The data is provided through the API provided by Mozantech.
 
@@ -10,7 +10,7 @@ The final result you can see here:
 
 Before running this project, make sure you have the API backend running locally, the API project can be found here: https://github.com/Mozantech/store-parts-exercise
 
-After running the API should be available on `http://localhost:8081`
+After running, the API should be available on `http://localhost:8081`
 
 ## Available Scripts
 
