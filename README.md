@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# MOZANTECH FRONTEND CHALLENG
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hello, this is the resolution of the challenge proposed by the Mozantech project. It is a SPA developed in react to show information about computer parts, as well as filter, order and show the details. The data is provided through the API provided by Mozantech.
+
+The final result you can see here:
+
+![Main Page](sample.PNG 'Main Page')
+
+## Dependencies
+
+Before running this project, make sure you have the API backend running locally, the API project can be found here: https://github.com/Mozantech/store-parts-exercise
+
+After running the API should be available on `http://localhost:8081`
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+`npm install` to install the project dependencies.
 
-Runs the app in the development mode.\
+`npm start` runs the app in the developement mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+`npm run lint` to lint the project according to the lint rules configured in `eslintrc.json` and `.prettierrc`.
 
-### `npm test`
+`npm run test` to run the tests for the project (only the Card component has tests for now).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Application Components
 
-### `npm run build`
+### Header
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Show the app title;
+- Is always visible when scrolling the app;
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### FilterParts
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Input to filter by query;
+- Select to filter by type;
+- Select to order by price;
 
-### `npm run eject`
+### Card
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Container to show the parts information.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### MainPage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- The main component for this application;
+- Has logic to handle with the filter and the loading from the API;
+- Store state for filters, order and parts;
+- Navigates to parts pages when a part is selected;
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### PartsPage
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- The page to show specific part details;
+- Gets the part information from the url;
